@@ -19,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: MiSans-VF, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +39,14 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  src: url('https://fonts.font.im/css?family=Fira+Mono');
+  font-family: 'Fira Mono', monospace;
+}
+
+@font-face {
+  src: url('https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap');
+  font-family: 'MiSans-VF', monospace;
 }
