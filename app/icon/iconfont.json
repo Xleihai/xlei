@@ -1,0 +1,23 @@
+{
+  "id": "4843430",
+  "name": "xlei",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1381385",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "34453208",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e856",
+      "unicode_decimal": 59478
+    }
+  ]
+}
