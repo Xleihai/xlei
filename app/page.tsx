@@ -33,6 +33,16 @@ export default function Home() {
       icon: "iconfont icon-email"
     }
   ];
+  const getSayings = async () => {
+    const res = await fetch("https://v1.hitokoto.cn/?c=d");
+    const data = await res.json();
+    console.log(data);
+    setSayings({
+      author: data.from_who,
+      content: data.hitokoto
+    });
+  };
+  // getSayings();
   return (
     <div className={styles.page}>
       <div className={styles.masked}></div>
@@ -66,14 +76,5 @@ export default function Home() {
       </main>
     </div>
   );
-  const getSayings = async () => {
-    const res = await fetch("https://v1.hitokoto.cn/?c=d");
-    const data = await res.json();
-    console.log(data);
-    setSayings({
-      author: data.from_who,
-      content: data.hitokoto
-    });
-  };
-  // getSayings();
+  
 }

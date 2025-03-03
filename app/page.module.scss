@@ -17,13 +17,15 @@
     height: 100%;
     text-align: center;
     display: table;
-
+    
     .content {
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-
+      
       .content_inner {
+        animation-duration: 1s;
+        animation-name: slidein;
         max-width: 680px;
         margin: 0 auto;
         .avatar {
@@ -87,4 +89,9 @@
       }
     }
   }
+}
+
+@keyframes slidein {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
