@@ -33,6 +33,16 @@ export default function Home() {
       icon: "iconfont icon-email"
     }
   ];
+  const getSayings = async () => {
+    const res = await fetch("https://v1.hitokoto.cn/?c=d");
+    const data = await res.json();
+    console.log(data);
+    setSayings({
+      author: data.from_who,
+      content: data.hitokoto
+    });
+  };
+  // getSayings();
   return (
     <div className={styles.page}>
       <div className={styles.masked}></div>
@@ -63,17 +73,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <footer className={styles.footer}>
+          {new Date().getFullYear()} &copy;&nbsp;
+          <a target="_blank" href="https://beian.miit.gov.cn">
+            粤ICP备2025385276号
+          </a>
+        </footer>
       </main>
     </div>
   );
-  const getSayings = async () => {
-    const res = await fetch("https://v1.hitokoto.cn/?c=d");
-    const data = await res.json();
-    console.log(data);
-    setSayings({
-      author: data.from_who,
-      content: data.hitokoto
-    });
-  };
-  // getSayings();
 }
